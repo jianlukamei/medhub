@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-gradient: linear-gradient(to bottom, #feca3a, #fe8648);
+  --background-gradient1: linear-gradient(to top, #feca3a, #fe8648);
+  --font-family: "Epilogue", sans-serif;
+  --font-family1: "Rubik", sans-serif;
+  --color: white;
+  --color1: rgba(74, 186, 139, 1);
+  --color2: rgba(255, 236, 165, 1); /*background barcolor */
+  --color3: rgba(255, 182, 96, 1); /*read more buttons */
+  --color4: rgba(216, 240, 230, 1); /* background-color section1 */
+}
+.login-pagebtn:hover {
+  background-color: var(--color1) !important;
+}
+.Client {
+  position: relative;
+  color: var(--color1);
+  z-index: 0;
+}
+.Client::after {
+  content: "";
+  position: absolute;
+  left: 114px;
+  bottom: 2px;
+  width: 197px;
+  height: 18px;
+  background-color: var(--color2);
+  z-index: -1;
+}
+
+.form-control {
+  border-radius: 8px;
+  background: rgb(255, 252, 252) !important;
+  font-family: var(--font-family1);
+}
+
+.Register {
+  position: relative;
+  color: var(--color1);
+  z-index: 0;
+}
+.Register::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: 2px;
+  width: 92px;
+  height: 11px;
+  background-color: var(--color2);
+  z-index: -1;
+}
+ 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  
+  input[type=number] {
+    appearance: textfield; 
+}
+
+.modal{
+  --bs-modal-footer-border-width: none !important;
+  --bs-modal-header-border-width: none !important;
+}
+.modal-body{
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
+}
+@media (max-width: 360px) {
+  .Client.Client::after {
+    left: 20px !important;
+    width: 152px !important;
+    height: 15px !important;
+    background-color: var(--color2) !important;
+  }
+  .Register {
+    text-align: center;
+  }
+  .Register::after {
+    left: 74px;
+  }
+}
